@@ -1,13 +1,14 @@
 {
   "name": "mname",
   "description": "DNS server library for node.js",
-  "version": "1.3.5",
+  "version": "1.4.0",
   "author": "arekinath <alex@cooperi.net>",
   "contributors": [
     "Mark Cavage",
     "Alex Wilson",
     "Lorenz Brun",
-    "Trevor Orsztynowicz"
+    "Trevor Orsztynowicz",
+    "Joshua M. Clulow"
   ],
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
   "dependencies": {
     "assert-plus": "^1.0.0",
     "bunyan": "^1.5.1",
-    "ipaddr.js": "^1.0.0"
+    "ipaddr.js": "^1.0.0",
+    "vasync": "^2.2.0"
   },
   "devDependencies": {
     "nodeunit": "0.9.1"

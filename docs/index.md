@@ -112,7 +112,7 @@ will send a 'null-response' DNS message. This is the equivalent of an HTTP 404.
 ### server.close(onClose)
 
 Stops listening and closes the socket. `onClose` is an optional callback that
-will be attached to the underlying socket `close` event.
+will be called once all underlying resources have been released.
 
 ### Event: 'listening'
 
