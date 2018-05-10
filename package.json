@@ -1,14 +1,15 @@
 {
   "name": "mname",
   "description": "DNS server library for node.js",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "arekinath <alex@cooperi.net>",
   "contributors": [
     "Mark Cavage",
     "Alex Wilson",
     "Lorenz Brun",
     "Trevor Orsztynowicz",
-    "Joshua M. Clulow"
+    "Joshua M. Clulow",
+    "Robert Bogart"
   ],
   "repository": {
     "type": "git",
