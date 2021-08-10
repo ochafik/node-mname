@@ -52,6 +52,11 @@ test('create a valid record (AAAA)', function(t) {
         testRecord(record, t);
 });
 
+test('create a valid record (CAA)', function(t) {
+        var record = new named.CAARecord('issue', 'issuer.org', {flags: 1});
+        testRecord(record, t);
+});
+
 test('create a valid record (CNAME)', function(t) {
         var record = new named.CNAMERecord('alias.example.com');
         testRecord(record, t);

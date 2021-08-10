@@ -59,6 +59,10 @@ before(function (callback) {
                         var record = new named.AAAARecord('::1');
                         query.addAnswer(domain, record);
                         break;
+                case 'CAA':
+                        var record = new named.CAARecord('issue', 'issuer.org', {flags: 1});
+                        query.addAnswer(domain, record);
+                        break;
                 case 'CNAME':
                         var record = new named.CNAMERecord('cname.example.com');
                         query.addAnswer(domain, record);
@@ -144,6 +148,21 @@ test('answer query: example.com (AAAA)', function (t) {
                         name: 'example.com.',
                         ttl: 5, type: 'AAAA',
                         target: '::1'
+                }]);
+                t.end();
+        });
+});
+
+
+test('answer query: example.com (CAA)', function (t) {
+        dig('example.com', 'CAA', options, function (err, results) {
+                t.ifError(err);
+                t.deepEqual(results.answers, [{
+                        name: 'example.com.',
+                        ttl: 5, type: 'CAA',
+                        tag: 'issue',
+                        value: 'issuer.org',
+                        flags: 1,
                 }]);
                 t.end();
         });

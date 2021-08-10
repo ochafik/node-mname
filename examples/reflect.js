@@ -14,6 +14,10 @@ server.on('query', function(query) {
                 var record = new named.ARecord('127.0.0.1');
                 query.addAnswer(domain, record, 300);
                 break;
+        case 'CAA':
+                var record = new named.CAARecord('issue', "letsencrypt.org");
+                query.addAnswer(domain, record, 300);
+                break;
         case 'AAAA':
                 var record = new named.AAAARecord('::1');
                 query.addAnswer(domain, record, 300);
